@@ -2,6 +2,8 @@ import React from "react";
 import MyNav from "../components/navbar";
 import MyFooter from "../components/footer";
 
+
+import Sections from "../components/sections";
 import "../css/style.css"
 import Carrousel from "../components/carrousel";
 
@@ -15,13 +17,17 @@ function Home() {
             
             <Carrousel/>
 
+            <Sections/>
+            <MyFooter/>
+            
             </div>
 
             
-            <MyFooter/>
+            
             
         
         </div>
+        
        
     )
     
