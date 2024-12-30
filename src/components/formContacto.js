@@ -4,10 +4,10 @@ export const Contacto = () =>  {
 
     return (
 
-<div className="w-50 bg-dark h-100 p-3 d-flex flex-column justify-content-center align-items-center">
-<div className="mb-3 w-75  align-content-center ">
+<div className="w-50 bg-dark h-100 p-5 d-flex flex-column justify-content-center align-items-center rounded">
+<div className="mb-3 w-100  align-content-center ">
 
-<label for="exampleFormControlInput1" className="form-label text-light w-100 text-center">Ecribinos con tu consulta</label>
+<label for="exampleFormControlInput1" className="form-label text-light w-100 text-center ">Escribinos con tu consulta</label>
 
 <label for="exampleFormControlInput1" className="form-label text-light w-100 mt-2">Email</label>
 
@@ -24,13 +24,13 @@ export const Contacto = () =>  {
 </select>
 
 </div>
-<div className="mb-3 w-75">
+<div className="mb-3 w-100">
 <label for="exampleFormControlTextarea1" className="form-label">Example textarea</label>
 <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 
 
 </div>
-<button type="submit" className="btn btn-primary w-75 ">Submit</button>       
+<button type="submit" className="btn btn-primary w-50 mt-3">Enviar</button>       
 </div>
 
 

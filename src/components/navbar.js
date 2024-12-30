@@ -8,11 +8,18 @@ export const MyNav = () =>  {
     
       <Navbar bg="dark" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Navbar.Brand href="#home">
+            Spyle
+            {/* <i class="fa-solid fa-s"></i> 
+            <i class="fa-solid fa-p"></i> 
+            <i class="fa-solid fa-y"></i> 
+            <i class="fa-solid fa-l"></i> 
+            <i class="fa-solid fa-e"></i>  */}
+            </Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link href="#home">Nosotros</Nav.Link>
+            <Nav.Link href="#features">Soluciones</Nav.Link>
+            <Nav.Link href="#pricing">Contacto</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

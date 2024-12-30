@@ -1,6 +1,8 @@
 import React from "react";
 import Contacto from "../components/formContacto";
 
+import Productos from "./productos";
+
 import "../css/section.css"
 
 export const Sections = () =>  {
@@ -10,9 +12,10 @@ export const Sections = () =>  {
 
 <section className="mySection mySectionHome ">
 
-<div className="col m-2 bg-dark h-75 flex-column justify-content-center align-items-center">
+<div className="col m-2 bg-dark h-75 flex-column justify-content-center align-items-center p-3">
 
-        <h2 className="text-light text-center"> Mision</h2>
+        <h2 className="text-light text-center"> Mision  <i class="fa-solid fa-flag"></i></h2>
+        
         <div >
 
 
@@ -20,15 +23,22 @@ export const Sections = () =>  {
         </div> 
 
 </div>
-<div className="col m-2 bg-dark h-75">
-<h2 className="text-light text-center"> Vision </h2>
+<div className="col m-2 bg-dark h-75 p-3">
+    
+<h2 className="text-light text-center"> Vision <i class="fa-solid fa-pencil"></i> </h2>
 
 </div>
-<div className="col m-2 bg-dark h-75">
-<h2 className="text-light text-center"> Objetivo</h2>
+<div className="col m-2 bg-dark h-75 p-3">
+<h2 className="text-light text-center"> Objetivo <i class="fa-solid fa-list"></i></h2>
 
 </div>
 
+</section>
+
+<section className="mySection">
+
+    <Productos/>    
+    
 </section>
 
 <section className="mySection ">
@@ -43,11 +53,7 @@ export const Sections = () =>  {
 
 
 
-<section className="mySection">
-<h2> Tres</h2>
 
-
-</section>
 </div>
     
 
