@@ -5,28 +5,28 @@ import "../css/carrousel.css"
 function Carrousel() {
   return (
     <Carousel className=' h-50 bg-secondary' >
-      <Carousel.Item interval={1000}>
-        {/* <ExampleCarouselImage text="First slide" /> */}
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
+      <Carousel.Item interval={1000000}>
+        
+        
+          <div className='carousel-caption-custom'>
+          <h2 className='fs-1'>S P Y L E</h2>
+          <p>Soluciones para potenciar tus proyectos</p>
+          </div>
+        
+        
+        
       </Carousel.Item>
       <Carousel.Item interval={500}>
-        {/* <ExampleCarouselImage text="Second slide" /> */}
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
+      <div className='carousel-caption-custom'>
+          <h3>Potenciamos tu negocio</h3>
+          <p>Te posicionamos en internet con un sitio a tu medida</p>
+          </div>
       </Carousel.Item>
       <Carousel.Item>
-        {/* <ExampleCarouselImage text="Third slide" /> */}
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
+      <div className='carousel-caption-custom'>
+          <h3>Metricas para tus ventas y tus redes</h3>
+          <p>Customizamos tu checkout de ventas y generamos un panel para medir tus redes.</p>
+          </div>
       </Carousel.Item>
     </Carousel>
   );

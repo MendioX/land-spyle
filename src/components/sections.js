@@ -30,6 +30,10 @@ export const Sections = () =>  {
 </div>
 <div className="col m-2 bg-dark h-75 p-3">
 <h2 className="text-light text-center"> Objetivo <i class="fa-solid fa-list"></i></h2>
+<div>
+<a href="https://wa.me/1234567890?text=hello+123" target="_blank" className="whatsapp-btn"><i className="bi bi-whatsapp"></i></a>
+
+</div>
 
 </div>
 
