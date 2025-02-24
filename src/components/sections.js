@@ -10,7 +10,7 @@ export const Sections = () =>  {
 
 <div>
 
-<section className="mySection mySectionHome ">
+<section className="mySection mySectionHome text-light">
 
 <div className="col m-2 bg-dark h-75 flex-column justify-content-center align-items-center p-3">
 
@@ -18,7 +18,7 @@ export const Sections = () =>  {
         
         <div >
 
-
+        <p>Implementacion y mejora tecnologica continua</p>
 
         </div> 
 
@@ -26,10 +26,12 @@ export const Sections = () =>  {
 <div className="col m-2 bg-dark h-75 p-3">
     
 <h2 className="text-light text-center"> Vision <i class="fa-solid fa-pencil"></i> </h2>
+<p>Implementacion y mejora tecnologica continua</p>
 
 </div>
 <div className="col m-2 bg-dark h-75 p-3">
-<h2 className="text-light text-center"> Objetivo <i class="fa-solid fa-list"></i></h2>
+    <h2 className="text-light text-center"> Objetivo <i class="fa-solid fa-list"></i></h2>
+    <p>Soluciones de alto impacto diseñadas a tu medida</p>
 <div>
 <a href="https://wa.me/1234567890?text=hello+123" target="_blank" className="whatsapp-btn"><i className="bi bi-whatsapp"></i></a>
 

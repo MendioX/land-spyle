@@ -1,6 +1,18 @@
 .tarjeta-custom{
 
-    width: 20%;
+    width: 30%;
     height: 70%;
-   
+    
+}
+
+.card-img-top{
+    padding: 1rem;
+}
+
+.card-body-custom{
+height: 80%;
+
+}
+.card-text{
+    font-size: small;
 }
