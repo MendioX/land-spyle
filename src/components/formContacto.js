@@ -4,7 +4,7 @@ export const Contacto = () =>  {
 
     return (
 
-<div className="w-50 bg-dark h-100 p-5 d-flex flex-column justify-content-center align-items-center rounded">
+<div className="w-50 bg-dark h-100 p-5 d-flex flex-column justify-content-center align-items-center rounded" id="sectionContacto">
 <div className="mb-3 w-100  align-content-center ">
 
 <label for="exampleFormControlInput1" className="form-label text-light w-100 text-center ">Escribinos con tu consulta</label>
