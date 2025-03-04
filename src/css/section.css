@@ -3,7 +3,7 @@
     height:     90vh;
     width:      100vw;
 
-    background-color: rgb(82, 77, 77);
+    background-color: var(--secondary-color );
 
     padding: 1rem;
     display: flex;
@@ -16,7 +16,7 @@
 
 .mySectionHome{
 
-    height:     40vh;
+    height: 50vh;
     
 }
 
@@ -72,3 +72,36 @@
     }
   }
 
+  .bg-custom {
+
+    background-color: var(--primary-color);
+    
+  }
+
+  .aling-flex-custom {
+
+    align-items: flex-end; 
+
+}
+
+
+
+@media (max-width: 768px) {
+  .mySection {
+      flex-direction: column;
+      height: auto; /* Ajusta la altura según el contenido */
+      padding-left: 5%;
+      padding-right: 5%;
+  }
+
+  .mySectionHome{
+
+    height: 60vh;
+    
+}
+
+.custom-nosotros{
+
+  height: 25vh !important ;
+}
+}

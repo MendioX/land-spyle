@@ -1,0 +1,27 @@
+#navbarMain.navbar {
+
+    background-color: var(--primary-color ) !important;
+    
+}
+
+#navbarMain .navbar-brand, 
+#navbarMain .nav-link {
+    color: var(--secondary-color) !important;
+    filter: drop-shadow(0 0 0.50rem var( --secondary-color));
+}
+
+
+
+
+@media (max-width: 768px) {
+    .custom-navbar .navbar-brand {
+        font-size:medium ;
+    }
+
+    
+
+    #navbarMain .nav-link{
+        padding-left: 0;
+        font-size: small;
+    }
+  }

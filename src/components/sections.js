@@ -3,6 +3,8 @@ import Contacto from "../components/formContacto";
 
 import Productos from "./productos";
 
+import Nosotros from "./infoNosotros";
+
 import "../css/section.css"
 
 export const Sections = () =>  {
@@ -10,46 +12,20 @@ export const Sections = () =>  {
 
 <div>
 
-<section className="mySection mySectionHome text-light">
 
-<div className="col m-2 bg-dark h-75 flex-column justify-content-center align-items-center p-3">
+<Nosotros/>
 
-        <h2 className="text-light text-center"> Mision  <i class="fa-solid fa-flag"></i></h2>
-        
-        <div >
 
-        <p>Implementacion y mejora tecnologica continua</p>
 
-        </div> 
-
-</div>
-<div className="col m-2 bg-dark h-75 p-3">
-    
-<h2 className="text-light text-center"> Vision <i class="fa-solid fa-pencil"></i> </h2>
-<p>Implementacion y mejora tecnologica continua</p>
-
-</div>
-<div className="col m-2 bg-dark h-75 p-3">
-    <h2 className="text-light text-center"> Objetivo <i class="fa-solid fa-list"></i></h2>
-    <p>Soluciones de alto impacto diseñadas a tu medida</p>
-<div>
-<a href="https://wa.me/1234567890?text=hello+123" target="_blank" className="whatsapp-btn"><i className="bi bi-whatsapp"></i></a>
-
-</div>
-
-</div>
-
-</section>
-
-<section className="mySection">
+<section className="mySection " id="sectionProductos">
 
     <Productos/>    
     
 </section>
 
-<section className="mySection ">
+<section className="mySection aling-flex-custom">
 
-<div className="col m-2 d-flex h-75 flex-column justify-content-center align-items-center">
+<div className="col m-2 d-flex h-75 flex-column justify-content-center align-items-center w-100">
 
 <Contacto/>
 

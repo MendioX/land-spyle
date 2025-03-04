@@ -1,7 +1,7 @@
 .tarjeta-custom{
 
     width: 30%;
-    height: 70%;
+    height: 100% !important;
     
 }
 
@@ -10,9 +10,19 @@
 }
 
 .card-body-custom{
-height: 80%;
+height: 80% !important;
 
 }
 .card-text{
     font-size: small;
 }
+
+
+
+@media (max-width: 768px) {
+    .tarjeta-custom {
+       width: 90vw;
+       height: 40vh;
+       
+    }
+  }

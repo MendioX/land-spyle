@@ -4,12 +4,12 @@
     left: 15%;
     padding-top: 8%;
     padding-bottom: 1.25rem;
-    color: #fff;
+    color: var(--text-color);
     text-align: center;
     height: 100%;
 
     position: absolute;
-    top: 0;
+    top: -10%;
     left: 0;
     width: 100%;
     height: 100%;
@@ -18,22 +18,23 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white; /* Ajusta el color del texto según necesidad */
+    color: var(--secondary-color); /* Ajusta el color del texto según necesidad */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    margin-top: 5vh;
     
 }
 
 .carousel-caption-custom::before {
     content: "";
-    color: white;
+    color: var(--secondary-color);
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad */
+    background: rgba(0, 0, 0, 0.5); 
     z-index: 0;
   }
 
@@ -49,4 +50,61 @@
 
 .carousel-inner {
     height: 100%;
+}
+
+
+#subtitle{
+
+  font-family: "Yellowtail", cursive;
+  /* font-weight: 50; */
+  font-style: normal;
+  color: var( --tertiary-color);
+  /* filter: drop-shadow(0 0 0.50rem var( --tertiary-color)); */
+}
+
+#titleMain{
+
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:800;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+    letter-spacing: 1rem;
+
+    /* filter: blur(1px); */
+}
+
+
+.img-filter-custom::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit; /* Hereda el fondo del contenedor */
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(1); /* Aplica solo al fondo */
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+ #titleMain {
+  letter-spacing: 0.3rem;
+  /* font-size: 0.4rem !important; */
+  font-weight: bold;
+  margin-bottom : -2%;
+  
+  /* text-shadow: 0 0 10px whitesmoke; */
+
+
+  }
+
+  .carousel-caption-custom {
+    top: 4%;
+  }
+
+
 }

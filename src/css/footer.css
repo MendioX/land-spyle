@@ -1,5 +1,26 @@
+.link-redes {
+
+       
+    max-width:30% !important;
+}
+
+
+#myfoother{
+    background-color: var(--primary-color);
+    color: var( --secondary-color);
+}
+
+
 .link-redes li a{
 
-    color: white;
+    color: var(--secondary-color);
     font-size:larger;
 }
+
+@media (max-width: 768px) {
+    .link-redes {
+
+       
+        max-width:70% !important;
+    }
+  }
