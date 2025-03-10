@@ -7,7 +7,7 @@ import "../css/footer.css"
 export const MyFooter = () =>  {
     return (
 
-        <footer className="page-footer font-small blue pt-4 " id="myfoother">
+        <footer className="page-footer font-small blue pt-3 " id="myfoother">
         <div className="container-fluid text-center text-md-left d-flex flex-column justify-content-center w-100">
             <div className="row w-100 justify-content-center">
                 {/* <div className="col-md-8 mt-md-0 mt-3">
@@ -34,9 +34,8 @@ export const MyFooter = () =>  {
 
                     <ul className="list-unstyled d-flex flex-row justify-content-evenly">
                         
-                        <li><a href="#!"><i class="fa-brands fa-square-facebook"></i></a></li>
-                        <li><a href="#!"><i class="fa-brands fa-instagram"></i></a></li>
-                        <li><a href="#!"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="https://www.instagram.com/neuroticaitgirl/"><i class="fa-brands fa-square-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/neuroticaitgirl/"><i class="fa-brands fa-instagram"></i></a></li>
                         <li><a href="#!"><i class="fa-solid fa-envelope"></i> </a></li>
                     </ul>
 
@@ -47,7 +46,7 @@ export const MyFooter = () =>  {
         <div className="footer-copyright text-center pt-1 py-2 pb-4">
             <p>© 2025 Copyright - Todos los derechos reservados por Neurotica </p>
             
-            <a href="https://mdbootstrap.com/" className="link-light text-uppercase">Developed by Spyle</a>
+            <a href="https://mdbootstrap.com/" className="link-light text-uppercase fs-6 fst-italic text-decoration-none">Developed by Spyle</a>
         </div>
     
     </footer>

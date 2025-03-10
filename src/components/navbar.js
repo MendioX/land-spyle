@@ -15,7 +15,7 @@ export const MyNav = () =>  {
             </Navbar.Brand>
           <Nav className="me-auto p-0">
             <Nav.Link href="#sectionCarrousel">Nosotros</Nav.Link>
-            <Nav.Link href="#sectionProductos">Soluciones</Nav.Link>
+            <Nav.Link href="#sectionServicios">Servicios</Nav.Link>
             <Nav.Link href="#sectionContacto">Contacto</Nav.Link>
           </Nav>
         </Container>

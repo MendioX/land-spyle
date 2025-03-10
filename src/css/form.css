@@ -1,9 +1,24 @@
+.form-custom{
+    width: 60vw;
+}
 
+.recaptcha-custom {
+    transform: scale(0.8);  /* Reduce el tamaño */
+}
 
 @media (max-width: 768px) {
     .form-custom {
 
-        width: 80vw  !important;
-
+        width: 90vw  !important;
+        
     }
+    .recaptcha-custom {
+        transform: scale(0.95);  /* Reduce el tamaño */
+    }
+
+    #btn-custom-form{
+
+        width: 100%  !important;
+    }
+    
   }

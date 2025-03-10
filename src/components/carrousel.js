@@ -7,7 +7,7 @@ import imgCarrousel_3 from "../img/hero-portada-7.png"
 function Carrousel() {
   return (
     <Carousel className=' h-50 bg-secondary ' id='sectionCarrousel' >
-      <Carousel.Item interval={500000} >
+      <Carousel.Item interval={5000} >
         
           {/* <img src={imgCarrousel} className="d-block "></img> */}
           <div className='carousel-caption-custom'
@@ -17,7 +17,7 @@ function Carrousel() {
           </div>
 
       </Carousel.Item>
-      <Carousel.Item interval={500000}>
+      <Carousel.Item interval={5000}>
 
 
       <div className='carousel-caption-custom'

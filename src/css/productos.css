@@ -2,6 +2,8 @@
 
     width: 30%;
     height: 100% !important;
+    background-color:  var(--primary-color) !important;
+    color: var(--secondary-color) !important;
     
 }
 
@@ -17,6 +19,10 @@ height: 80% !important;
     font-size: small;
 }
 
+.title-cutom{
+    color: var(--primary-color) !important;
+    text-underline-offset: 10px;
+}
 
 
 @media (max-width: 768px) {

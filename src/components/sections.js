@@ -17,15 +17,15 @@ export const Sections = () =>  {
 
 
 
-<section className="mySection " id="sectionProductos">
-
+<section className="mySection flex-column" id="sectionServicios">
+<div className="w-75 text-center mb-1 mt-5 "><h2 className=" title-cutom"> Nuestros Servicios</h2></div>
     <Productos/>    
     
 </section>
 
 <section className="mySection aling-flex-custom">
 
-<div className="col m-2 d-flex h-75 flex-column justify-content-center align-items-center w-100">
+<div className="col  d-flex h-75 flex-column justify-content-center align-items-center w-100">
 
 <Contacto/>
 
