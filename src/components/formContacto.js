@@ -2,26 +2,88 @@ import React from "react";
 import { useState } from "react";
 import "../css/form.css"
 import ReCAPTCHA from "react-google-recaptcha";
+import Swal from "sweetalert2";
 
 export const Contacto = () =>  {
 
 
-    const [captchaValido, setCaptchaValido] = useState(false);
 
-    const handleRecaptchaChange = (value) => {
-        setCaptchaValido(!!value); // Si hay valor, el captcha es válido
-    };
-
-    const handleSubmit = (e) => {
+    const [formData, setFormData] = useState({
+        toClient:  process.env.REACT_APP_EMAIL_USER,
+        email: "",
+        motivo: "Quiero una asesoría de imagen",
+        mensaje: "",
+      });
+    
+      const [recaptchaValue, setRecaptchaValue] = useState(null);
+    
+      const handleChange = (e) => {
+        setFormData({
+          ...formData,
+          [e.target.name]: e.target.value,
+        });
+      };
+    
+      const handleRecaptchaChange = (value) => {
+        setRecaptchaValue(value);
+      };
+    
+      const handleSubmit = async (e) => {
         e.preventDefault();
-        if (!captchaValido) {
-            alert("Por favor, verifica que no eres un robot.");
-            return;
+    
+        if (!recaptchaValue) {
+        //   alert("Por favor, verifica que no eres un robot.");
+          showAlert (false , "Por favor, verifica que no eres un robot." ,"Cuidado" )
+          return;
         }
-        alert("Formulario enviado correctamente.");
-        // Aquí puedes enviar los datos al backend
-    };
+    
+        try {
+          const response = await fetch("http://localhost:5000/api/send-email", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData),
+          });
+    
+          const data = await response.json();
+    
+          if (response.ok) {
+            
+            showAlert (true , "Un asesor se contactará contigo.", "Correo enviado")
+            setFormData({ toClient:  process.env.REACT_APP_EMAIL_USER, email: "", motivo: "Quiero una asesoría de imagen", mensaje: "" });
+          } else {
+            alert("Error al enviar el correo: " + data.error);
+          }
+        } catch (error) {
+          console.error("Error en la solicitud:", error);
+          showAlert (false , "No pudimos enviar tu correo.", "Algo salio mal")
+        
+        }
+      };
+    
 
+      const showAlert = ( value , msj , title ) => {
+
+        if(value){
+            Swal.fire({
+            
+                title: title,
+                text: msj,
+                icon: "success",
+                confirmButtonText: "OK",
+              });
+
+        }else if (value === false){
+
+            Swal.fire({
+            
+                title: title,
+                text: msj,
+                icon: "warning",
+                confirmButtonText: "OK",
+              });
+        }
+       
+      };
 
     return (
 
@@ -32,22 +94,45 @@ export const Contacto = () =>  {
 
 <label for="exampleFormControlInput1" className="form-label  w-100 mt-1">Email</label>
 
-    <input type="email" className="form-control " id="exampleFormControlInput1" placeholder="name@example.com"></input>
+    <input
+     type="email"
+     className="form-control"
+     id="email"
+     name="email"
+     placeholder="name@example.com"
+     value={formData.email}
+     onChange={handleChange}
+     required>
+     </input>
 
     <label for="exampleFormControlInput1" className="form-label  w-100 mt-0">Motivo</label>
 
-    <select class="form-select" aria-label="Default select example">
+    <select 
+      className="form-select"
+      id="motivo"
+      name="motivo"
+      value={formData.motivo}
+      onChange={handleChange}>
   <option selected>Quiero una asesoría de imagen</option>
-  <option value="1">Quiero un análisis de colorimetia</option>
-  <option value="2">Quiero un detox de placard / armario capsula</option>
-  <option value="3">Otro </option>
+  <option value="Quiero un análisis de colorimetia">Quiero un análisis de colorimetia</option>
+  <option value="Quiero un detox de placard / armario capsula">Quiero un detox de placard / armario capsula</option>
+  <option value="Otro">Otro</option>
   
 </select>
 
 </div>
 <div className="mb-1 w-100">
 <label for="exampleFormControlTextarea1" className="form-label">¿Como podemos ayudarte?</label>
-<textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+<textarea  
+          className="form-control"
+          id="mensaje"
+          name="mensaje"
+          rows="3"
+          value={formData.mensaje}
+          onChange={handleChange}
+          required>
+          </textarea>
 
 
 </div>
@@ -55,7 +140,7 @@ export const Contacto = () =>  {
  {/* reCAPTCHA */}
  <div className="recaptcha-custom">
         <ReCAPTCHA
-                sitekey="6LegfO8qAAAAAIrXd_umECF8b0NBKS-xf8rkktHn"
+                sitekey={process.env.REACT_APP_RECAPTCHA_SITEKEY}
                 onChange={handleRecaptchaChange} 
             />
             </div>

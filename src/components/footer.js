@@ -5,6 +5,10 @@ import "../css/footer.css"
 
 
 export const MyFooter = () =>  {
+
+
+
+    
     return (
 
         <footer className="page-footer font-small blue pt-3 " id="myfoother">
