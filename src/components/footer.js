@@ -40,7 +40,7 @@ export const MyFooter = () =>  {
                         
                         <li><a href="https://www.instagram.com/neuroticaitgirl/"><i class="fa-brands fa-square-facebook"></i></a></li>
                         <li><a href="https://www.instagram.com/neuroticaitgirl/"><i class="fa-brands fa-instagram"></i></a></li>
-                        <li><a href="#!"><i class="fa-solid fa-envelope"></i> </a></li>
+                        <li><a href={`https://wa.me/${process.env.REACT_APP_WSP_NUMBER}?text=Me interesa saber mas sobre el servicio de asesoria ! :)`} target="_blank"><i class="fa-solid fa fa-whatsapp"></i> </a></li>
                     </ul>
 
                 </div>

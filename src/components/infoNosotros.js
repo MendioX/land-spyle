@@ -30,7 +30,7 @@ return(
         <h2 className="text-light text-center text-uppercase fs-5"> ¿Por qué elegirnos? </h2>
         <p className="text-center">Nos comprometemos con ayudarte a que te sientas segura con tu imagen.</p>
     <div>
-    <a href="https://wa.me/1234567890?text=hello+123" target="_blank" className="whatsapp-btn"><i className="bi bi-whatsapp"></i></a>
+    <a href={`https://wa.me/${process.env.REACT_APP_WSP_NUMBER}?text=Me interesa saber mas sobre el servicio de asesoria ! :)`} target="_blank" className="whatsapp-btn"><i className="bi bi-whatsapp"></i></a>
     
     </div>
     
