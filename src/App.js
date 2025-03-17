@@ -23,7 +23,7 @@ function App() {
         }
       />
         <Route
-        path=""
+        path="/neurotica"
         element={
           
           
