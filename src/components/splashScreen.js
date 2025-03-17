@@ -7,8 +7,8 @@ const SplashScreen = ({ onFinish }) => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setFadeOut(true); // Iniciar desvanecimiento
-            setTimeout(onFinish, 500); // Esperar a que termine la animación antes de ocultarlo
-        }, 2000);
+            setTimeout(onFinish, 250); // Esperar a que termine la animación antes de ocultarlo
+        }, 1200);
 
         return () => clearTimeout(timer);
     }, [onFinish]);
