@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geo:ital@0;1&display=swap');
 
 body {
     width: 100%;
@@ -11,11 +12,11 @@ body {
     height: 100vh;
     width: 100vw;
   
-        --primary-color: #B2675C;
-        --secondary-color: #F3D1C6;
-        --tertiary-color: #E6A9A9;
-        --fourth-color: #5A3E36;
-        --rose-color: #ff7d7d;
+        --primary-color: #181616;
+        --secondary-color: #edfef7;
+        --tertiary-color: #00ab78;
+        --fourth-color: #00ab78;
+        --rose-color: #00ab78;
  }
 
 
@@ -32,3 +33,4 @@ body {
 
     color: var(--secondary-color) ;
 }
+

@@ -11,7 +11,7 @@ export const Contacto = () =>  {
     const [formData, setFormData] = useState({
         toClient:  process.env.REACT_APP_EMAIL_USER,
         email: "",
-        motivo: "Quiero una asesoría de imagen",
+        motivo: "Quiero un servicio de Spyle",
         mensaje: "",
       });
     
@@ -87,10 +87,10 @@ export const Contacto = () =>  {
 
     return (
 
-<form onSubmit={handleSubmit} className=" bg-custom h-100 p-3 d-flex flex-column justify-content-center align-items-center rounded color-text-custom form-custom shadow-lg" id="sectionContacto">
+<form onSubmit={handleSubmit} className=" bg-custom h-100 p-3 d-flex flex-column justify-content-center align-items-center rounded color-text-custom form-custom shadow-lg" id="sectionContacto" data-aos="fade-up">
 <div className="mb-1 w-100  align-content-center ">
 
-<label for="exampleFormControlInput1" className="form-label  w-100 text-center text-uppercase">Escribinos con tu consulta</label>
+<label for="exampleFormControlInput1" className="form-label  w-100 text-center text-uppercase fs-5">Escribinos con tu consulta</label>
 
 <label for="exampleFormControlInput1" className="form-label  w-100 mt-1">Email</label>
 
@@ -113,9 +113,9 @@ export const Contacto = () =>  {
       name="motivo"
       value={formData.motivo}
       onChange={handleChange}>
-  <option selected>Quiero una asesoría de imagen</option>
-  <option value="Quiero un análisis de colorimetia">Quiero un análisis de colorimetia</option>
-  <option value="Quiero un detox de placard / armario capsula">Quiero un detox de placard / armario capsula</option>
+  <option selected>Quiero una asesoramiento para mi sitio.</option>
+  <option value="Quiero un análisis de colorimetia">Quiero una landing.</option>
+  <option value="Quiero un detox de placard / armario capsula">Quiero diseñar un sistema para mi empresa.</option>
   <option value="Otro">Otro</option>
   
 </select>

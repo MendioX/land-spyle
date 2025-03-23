@@ -55,9 +55,9 @@
 
 #subtitle{
 
-  font-family: "Yellowtail", cursive;
-  /* font-weight: 50; */
-  font-style: normal;
+  font-family: "Geo", sans-serif;
+  font-weight: 400;
+  font-style: italic;
   color: var( --tertiary-color);
   /* filter: drop-shadow(0 0 0.50rem var( --tertiary-color)); */
 }
@@ -73,6 +73,7 @@
     letter-spacing: 1rem;
 
     /* filter: blur(1px); */
+    filter: drop-shadow(0 0 0.50rem var( --tertiary-color));
 }
 
 

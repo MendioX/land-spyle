@@ -18,7 +18,7 @@ export const Sections = () =>  {
 
 
 <section className="mySection flex-column" id="sectionServicios">
-<div className="w-75 text-center mb-1 mt-5 "><h2 className=" title-cutom"> Nuestros Servicios</h2></div>
+<div className="w-75 text-center mb-1 mt-5 "><h2 className=" title-cutom" data-aos="fade-up"> Nuestros Servicios</h2></div>
     <Productos/>    
     
 </section>

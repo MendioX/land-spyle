@@ -10,8 +10,8 @@ export const MyNav = () =>  {
     
       <Navbar  className="fixed-top vw-100 custom-navbar" id='navbarMain'>
         <Container>
-          <Navbar.Brand href="#sectionCarrousel">
-            N E U R O T I C A
+          <Navbar.Brand href="#sectionCarrousel" className=''>
+            {`</ S P Y L E >`}
             </Navbar.Brand>
           <Nav className="me-auto p-0">
             <Nav.Link href="#sectionCarrousel">Nosotros</Nav.Link>
