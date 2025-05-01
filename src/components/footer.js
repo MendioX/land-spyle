@@ -39,7 +39,7 @@ export const MyFooter = () =>  {
                     <ul className="list-unstyled d-flex flex-row justify-content-evenly">
                         
                         <li><a href="https://www.linkedin.com/in/nahuel-mendiolar-a21b36164/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/nahuel-mendiolar-a21b36164/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.instagram.com/spylesolutions?igsh=MWxmcXlteWg5Mjhtcw==" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
                         <li><a href={`https://wa.me/${process.env.REACT_APP_WSP_NUMBER}?text=Me interesa saber mas sobre el servicio de landings ! :)`} target="_blank"><i class="fa-solid fa fa-whatsapp"></i> </a></li>
                     </ul>
 
