@@ -14,13 +14,19 @@ function App() {
         <BrowserRouter>
         
        <Routes>
+       <Route
+        path="/home"
+        element={
+
+              <Home/>    
+          
+        }
+      />
       <Route
         path="/spyle-home"
         element={
-          
-          
-              <Home/>
-              
+
+              <Home/>    
           
         }
       />

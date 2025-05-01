@@ -6,7 +6,7 @@ import imgCarrousel_2 from "../img/hero-spyle-2.png"
 import imgCarrousel_3 from "../img/hero-spyle-1.png"
 function Carrousel() {
   return (
-    <Carousel className=' h-50 bg-secondary ' id='sectionCarrousel' >
+    <Carousel className=' h-50 bg-dark ' id='sectionCarrousel' >
       <Carousel.Item interval={5000} >
         
           {/* <img src={imgCarrousel} className="d-block "></img> */}
