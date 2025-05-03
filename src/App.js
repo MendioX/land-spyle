@@ -15,7 +15,7 @@ function App() {
         
        <Routes>
        <Route
-        path="/home"
+        path="/"
         element={
 
               <Home/>    
@@ -23,7 +23,7 @@ function App() {
         }
       />
       <Route
-        path="/spyle-home"
+        path="/home"
         element={
 
               <Home/>    
