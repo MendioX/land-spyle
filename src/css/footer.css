@@ -1,27 +1,43 @@
 .link-redes {
 
-       
+
     max-width:30% !important;
 }
 
 
 #myfoother{
-    background-color: var(--primary-color);
-    color: var( --secondary-color);
-    
+    background-color: var(--color-dark);
+    color: var(--color-text-light);
+
 }
 
 
 .link-redes li a{
 
-    color: var(--secondary-color);
+    color: var(--color-text-light);
     font-size:larger;
+    transition: color 0.2s ease;
+}
+
+.link-redes li a:hover {
+
+    color: var(--color-accent);
+}
+
+.footer-copyright {
+
+    color: var(--color-muted);
+}
+
+.footer-copyright a {
+
+    color: var(--color-text-light) !important;
 }
 
 @media (max-width: 768px) {
     .link-redes {
 
-       
+
         max-width:70% !important;
     }
   }

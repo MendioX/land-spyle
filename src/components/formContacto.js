@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "../css/form.css"
 import ReCAPTCHA from "react-google-recaptcha";
-import Swal from "sweetalert2";
+import toast from "react-hot-toast";
 
 export const Contacto = () =>  {
 
@@ -14,142 +14,122 @@ export const Contacto = () =>  {
         motivo: "Quiero un servicio de Spyle",
         mensaje: "",
       });
-    
+
       const [recaptchaValue, setRecaptchaValue] = useState(null);
-    
+
       const handleChange = (e) => {
         setFormData({
           ...formData,
           [e.target.name]: e.target.value,
         });
       };
-    
+
       const handleRecaptchaChange = (value) => {
         setRecaptchaValue(value);
       };
-    
+
       const handleSubmit = async (e) => {
         e.preventDefault();
-    
+
         if (!recaptchaValue) {
-        //   alert("Por favor, verifica que no eres un robot.");
-          showAlert (false , "Por favor, verifica que no eres un robot." ,"Cuidado" )
+          toast.error("Por favor, verifica que no eres un robot.");
           return;
         }
-    
+
         try {
           const response = await fetch(process.env.REACT_APP_BACKEND_URL+"/api/send-email", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData),
           });
-    
+
           const data = await response.json();
-    
+
           if (response.ok) {
-            
-            showAlert (true , "Un asesor se contactará contigo.", "Correo enviado")
+
+            toast.success("Un asesor se contactará contigo.");
             setFormData({ toClient:  process.env.REACT_APP_EMAIL_USER, email: "", motivo: "Quiero una asesoría de imagen", mensaje: "" });
           } else {
-            alert("Error al enviar el correo: " + data.error);
+            toast.error("Error al enviar el correo: " + data.error);
           }
         } catch (error) {
           console.error("Error en la solicitud:", error);
-          showAlert (false , "No pudimos enviar tu correo.", "Algo salio mal")
-        
+          toast.error("No pudimos enviar tu correo.");
+
         }
-      };
-    
-
-      const showAlert = ( value , msj , title ) => {
-
-        if(value){
-            Swal.fire({
-            
-                title: title,
-                text: msj,
-                icon: "success",
-                confirmButtonText: "OK",
-              });
-
-        }else if (value === false){
-
-            Swal.fire({
-            
-                title: title,
-                text: msj,
-                icon: "warning",
-                confirmButtonText: "OK",
-              });
-        }
-       
       };
 
     return (
 
-<form onSubmit={handleSubmit} className=" bg-custom h-100 p-3 d-flex flex-column justify-content-center align-items-center rounded color-text-custom form-custom shadow-lg" id="sectionContacto" data-aos="fade-up">
-<div className="mb-1 w-100  align-content-center ">
+<form onSubmit={handleSubmit} className="bg-custom color-text-custom form-custom shadow-lg" id="sectionContacto" data-aos="fade-up">
 
-<label for="exampleFormControlInput1" className="form-label  w-100 text-center text-uppercase fs-5">Escribinos con tu consulta</label>
+    <div className="form-header text-center mb-4">
+        <span className="form-header-icon"><i className="bi bi-chat-dots"></i></span>
+        <h2 className="form-title">Escribinos con tu consulta</h2>
+        <p className="form-subtitle">Contanos que necesitás y te respondemos a la brevedad.</p>
+    </div>
 
-<label for="exampleFormControlInput1" className="form-label  w-100 mt-1">Email</label>
+    <div className="row g-3 w-100">
 
-    <input
-     type="email"
-     className="form-control"
-     id="email"
-     name="email"
-     placeholder="name@example.com"
-     value={formData.email}
-     onChange={handleChange}
-     required>
-     </input>
+        <div className="col-12 col-md-6">
+            <label htmlFor="email" className="form-label"><i className="bi bi-envelope me-1"></i>Email</label>
+            <input
+             type="email"
+             className="form-control"
+             id="email"
+             name="email"
+             placeholder="name@example.com"
+             value={formData.email}
+             onChange={handleChange}
+             required>
+             </input>
+        </div>
 
-    <label for="exampleFormControlInput1" className="form-label  w-100 mt-0">Motivo</label>
+        <div className="col-12 col-md-6">
+            <label htmlFor="motivo" className="form-label"><i className="bi bi-list-task me-1"></i>Motivo</label>
+            <select
+              className="form-select"
+              id="motivo"
+              name="motivo"
+              value={formData.motivo}
+              onChange={handleChange}>
+          <option selected>Quiero una asesoramiento para mi sitio.</option>
+          <option value="Quiero un análisis de colorimetia">Quiero una landing.</option>
+          <option value="Quiero un detox de placard / armario capsula">Quiero diseñar un sistema para mi empresa.</option>
+          <option value="Otro">Otro</option>
+        </select>
+        </div>
 
-    <select 
-      className="form-select"
-      id="motivo"
-      name="motivo"
-      value={formData.motivo}
-      onChange={handleChange}>
-  <option selected>Quiero una asesoramiento para mi sitio.</option>
-  <option value="Quiero un análisis de colorimetia">Quiero una landing.</option>
-  <option value="Quiero un detox de placard / armario capsula">Quiero diseñar un sistema para mi empresa.</option>
-  <option value="Otro">Otro</option>
-  
-</select>
+        <div className="col-12">
+            <label htmlFor="mensaje" className="form-label"><i className="bi bi-pencil me-1"></i>¿Como podemos ayudarte?</label>
+            <textarea
+                  className="form-control"
+                  id="mensaje"
+                  name="mensaje"
+                  rows="3"
+                  value={formData.mensaje}
+                  onChange={handleChange}
+                  required>
+                  </textarea>
+        </div>
 
-</div>
-<div className="mb-1 w-100">
-<label for="exampleFormControlTextarea1" className="form-label">¿Como podemos ayudarte?</label>
-
-<textarea  
-          className="form-control"
-          id="mensaje"
-          name="mensaje"
-          rows="3"
-          value={formData.mensaje}
-          onChange={handleChange}
-          required>
-          </textarea>
-
-
-</div>
+    </div>
 
  {/* reCAPTCHA */}
  <div className="recaptcha-custom">
         <ReCAPTCHA
                 sitekey={process.env.REACT_APP_RECAPTCHA_SITEKEY}
-                onChange={handleRecaptchaChange} 
+                onChange={handleRecaptchaChange}
             />
             </div>
 
-<button type="submit" className="btn btn-outline-light w-50 mt-2 " id="btn-custom-form">Enviar</button>       
+<button type="submit" className="btn btn-servicio w-50 mt-2 d-flex align-items-center justify-content-center gap-2" id="btn-custom-form">
+    Enviar <i className="bi bi-send"></i>
+</button>
 </form>
 
 
-    
+
     )
 }
 

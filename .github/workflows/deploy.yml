@@ -1,0 +1,46 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Write .env
+        run: |
+          cat <<EOF > .env
+          REACT_APP_BACKEND_URL=${{ secrets.REACT_APP_BACKEND_URL }}
+          REACT_APP_EMAIL_USER=${{ secrets.REACT_APP_EMAIL_USER }}
+          REACT_APP_RECAPTCHA_SITEKEY=${{ secrets.REACT_APP_RECAPTCHA_SITEKEY }}
+          REACT_APP_WSP_NUMBER=${{ secrets.REACT_APP_WSP_NUMBER }}
+          EOF
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy over SSH (rsync)
+        uses: easingthemes/ssh-deploy@v6
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          REMOTE_HOST: ${{ secrets.DEPLOY_HOST }}
+          REMOTE_USER: ${{ secrets.DEPLOY_USER }}
+          REMOTE_PORT: ${{ secrets.DEPLOY_PORT }}
+          TARGET: ${{ secrets.DEPLOY_TARGET }}
+          SOURCE: build/
+          ARGS: -rlgoDzvc -i --delete

@@ -10,18 +10,18 @@ return(
    
     <section className="mySection mySectionHome text-light"  >
 
-    <div  className="col m-2 bg-custom h-75 flex-column justify-content-center d-flex align-items-center p-3 rounded custom-nosotros shadow-lg">
-    
+    <div  className="col m-2 bg-custom h-75 flex-column justify-content-center d-flex align-items-center p-3 rounded custom-nosotros shadow-lg" data-aos="fade-up">
+
         <h2 className="text-light text-center text-uppercase fs-4"> ¿quienes somos?  </h2>
-        <p className="text-center ">Somos apasionados por la tecnología, al servicio de tu necesidad.</p>     
+        <p className="text-center ">Somos apasionados por la tecnología, al servicio de tu necesidad.</p>
     </div>
 
-    <div  className="col m-2 bg-custom h-75 flex-column justify-content-center d-flex align-items-center p-3 rounded custom-nosotros shadow-lg ">
+    <div  className="col m-2 bg-custom h-75 flex-column justify-content-center d-flex align-items-center p-3 rounded custom-nosotros shadow-lg " data-aos="fade-up" data-aos-delay="100">
         <h2 className="text-light text-center text-uppercase fs-4"> ¿Que hacemos?  </h2>
         <p className="text-center align-middle ">Brindamos soluciones tecnológicas para que vos y tu negocio sigan creciendo.</p>
-    </div> 
-    
-    <div   className="col m-2 bg-custom h-75 flex-column justify-content-center d-flex align-items-center p-3 rounded custom-nosotros shadow-lg">
+    </div>
+
+    <div   className="col m-2 bg-custom h-75 flex-column justify-content-center d-flex align-items-center p-3 rounded custom-nosotros shadow-lg" data-aos="fade-up" data-aos-delay="200">
         <h2 className="text-light text-center text-uppercase fs-5"> ¿Por qué elegirnos? </h2>
         <p className="text-center">Tenemos compromiso y estamos abiertos a los cambios tecnológicos.</p>
     <div>

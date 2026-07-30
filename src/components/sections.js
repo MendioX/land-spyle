@@ -5,6 +5,8 @@ import Productos from "./productos";
 
 import Nosotros from "./infoNosotros";
 
+import Proyectos from "./proyectos";
+
 import "../css/section.css"
 
 export const Sections = () =>  {
@@ -19,9 +21,11 @@ export const Sections = () =>  {
 
 <section className="mySection flex-column" id="sectionServicios">
 <div className="w-75 text-center mb-1 mt-5 "><h2 className=" title-cutom" data-aos="fade-up"> Nuestros Servicios</h2></div>
-    <Productos/>    
-    
+    <Productos/>
+
 </section>
+
+<Proyectos/>
 
 <section className="mySection aling-flex-custom">
 

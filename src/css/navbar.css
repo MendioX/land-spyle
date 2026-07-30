@@ -1,27 +1,57 @@
 #navbarMain.navbar {
 
-    background-color: var(--primary-color ) !important;
-    box-shadow: 0px 0.5px   var(--rose-color);
+    background-color: rgba(18, 24, 26, 0.85) !important;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 1px 0 rgba(0, 179, 126, 0.25);
+    transition: background-color 0.3s ease;
 }
 
-#navbarMain .navbar-brand, 
+#navbarMain .navbar-brand {
+    color: var(--color-text-light) !important;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+}
+
 #navbarMain .nav-link {
-    color: var(--secondary-color) !important;
-    filter: drop-shadow(0 0 0.50rem var( --secondary-color));
+    color: var(--color-text-light) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.2s ease;
 }
 
+#navbarMain .nav-link:hover,
+#navbarMain .nav-link:focus {
+    color: var(--color-accent) !important;
+}
 
+#navbarMain .navbar-toggler {
+    border-color: rgba(246, 248, 247, 0.35);
+    padding: 0.35rem 0.6rem;
+}
 
+#navbarMain .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 179, 126, 0.35);
+}
+
+#navbarMain .navbar-toggler-icon {
+    filter: invert(1);
+}
 
 @media (max-width: 768px) {
     .custom-navbar .navbar-brand {
-        font-size:medium ;
+        font-size: medium;
     }
 
-    
+    #navbarMain .navbar-collapse {
+        background-color: rgba(18, 24, 26, 0.95);
+        border-radius: 0.75rem;
+        margin-top: 0.75rem;
+        padding: 0.5rem 0.75rem;
+    }
 
-    #navbarMain .nav-link{
-        padding-left: 0;
+    #navbarMain .nav-link {
+        padding-left: 0.5rem;
         font-size: small;
     }
   }
