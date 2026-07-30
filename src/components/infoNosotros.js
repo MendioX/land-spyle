@@ -26,7 +26,7 @@ return(
         <p className="text-center">Tenemos compromiso y estamos abiertos a los cambios tecnológicos.</p>
     <div>
 
-    <a href={`https://wa.me/${process.env.REACT_APP_WSP_NUMBER}?text=Me interesa saber mas sobre el servicio de asesoria ! :)`} target="_blank" className="whatsapp-btn" ><i className="bi bi-whatsapp"></i></a>
+    <a href={`https://wa.me/${process.env.REACT_APP_WSP_NUMBER}?text=Me interesa saber mas sobre el servicio de asesoria ! :)`} target="_blank" rel="noopener noreferrer" className="whatsapp-btn" ><i className="bi bi-whatsapp"></i></a>
    
     
     </div>

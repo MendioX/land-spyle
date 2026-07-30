@@ -38,9 +38,9 @@ export const MyFooter = () =>  {
 
                     <ul className="list-unstyled d-flex flex-row justify-content-evenly">
                         
-                        <li><a href="https://www.linkedin.com/in/nahuel-mendiolar-a21b36164/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-                        <li><a href="https://www.instagram.com/spylesolutions?igsh=MWxmcXlteWg5Mjhtcw==" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                        <li><a href={`https://wa.me/${process.env.REACT_APP_WSP_NUMBER}?text=Me interesa saber mas sobre el servicio de landings ! :)`} target="_blank"><i class="fa-solid fa fa-whatsapp"></i> </a></li>
+                        <li><a href="https://www.linkedin.com/in/nahuel-mendiolar-a21b36164/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="https://www.instagram.com/spylesolutions?igsh=MWxmcXlteWg5Mjhtcw==" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href={`https://wa.me/${process.env.REACT_APP_WSP_NUMBER}?text=Me interesa saber mas sobre el servicio de landings ! :)`} target="_blank" rel="noopener noreferrer"><i class="fa-solid fa fa-whatsapp"></i> </a></li>
                     </ul>
 
                 </div>
@@ -50,7 +50,7 @@ export const MyFooter = () =>  {
         <div className="footer-copyright text-center pt-1 py-2 pb-4">
             <p>© 2025 Copyright - Todos los derechos reservados por Spyle </p>
             
-            <a href="https://mdbootstrap.com/" target="_blank" className="link-light text-uppercase fs-6 fst-italic text-decoration-none">Developed by Spyle</a>
+            <a href="https://mdbootstrap.com/" target="_blank" rel="noopener noreferrer" className="link-light text-uppercase fs-6 fst-italic text-decoration-none">Developed by Spyle</a>
         </div>
     
     </footer>
